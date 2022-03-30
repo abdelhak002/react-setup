@@ -1,9 +1,11 @@
 import React from "react";
 
-const Main = () => {
+const Main = (props) => {
   return (
-    <div className="bg-white px-6 py-8 dark:bg-slate-900 dark:text-gray-100">
-      Start From Main Component
+    <div
+      className={`${props.className} bg-white text-gray-800 dark:bg-slate-800 dark:text-gray-100`}
+    >
+      {props.children}
     </div>
   );
 };
