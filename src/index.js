@@ -1,8 +1,14 @@
-import * as ReactDOMClient from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom";
 import "./App.css";
 import App from "./App";
+import { ThemeProvider } from "./ThemeContext";
 
-const container = document.getElementById("root");
-const root = ReactDOMClient.createRoot(container);
-root.render(<App tab="home" />);
-root.render(<App tab="profile" />);
+ReactDOM.render(
+  <React.StrictMode>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
